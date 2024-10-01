@@ -1,11 +1,41 @@
-<ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Tarefas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tarefas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="container">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>Tarefa 1</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tarefa 2</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-text color="primary">
+        Tarefa 3
+      </ion-text>
+      <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
+    </ion-item>
+  </ion-list>
 
-  <div id="container">
-    <ion-title>Teste</ion-title>
-  </div>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+          dicta.
+        </p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
