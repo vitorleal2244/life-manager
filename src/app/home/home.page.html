@@ -1,12 +1,69 @@
-<ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true" class="container home-container">
+  <ion-text class="home__intro-text">
+    <h2>Helcome, Vitor</h2>
+    <p>20 February, 2020</p>
+  </ion-text>
+  <ion-card class="to-do-list">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-icon name="notifications" color="warning"></ion-icon>
+        Activities today
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Meditation and relaxation
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-text>
+    What do you need today?
+  </ion-text>
+  <swiper-container
+    [loop]="true"
+  >
+    <swiper-slide>
+      <ion-card class="to-do-option">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon name="telescope" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <ion-card-header>
+                <ion-card-subtitle>
+                  Medidation Zen
+                </ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                Recommended in morning
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card class="to-do-option">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon name="telescope" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <ion-card-header>
+                <ion-card-subtitle>
+                  Nice breakfast
+                </ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                Recommended in morning
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+</ion-footer>
